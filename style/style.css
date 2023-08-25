@@ -1,0 +1,60 @@
+body {
+    font-family: "Times New Roman", serif;
+    margin-top: 1.78cm;
+    margin-bottom: 1.78cm;
+    margin-left: 1.65cm;
+    margin-right: 1.65cm;
+}
+
+.title {
+    font-size: 24pt;
+    text-align: center;
+}
+
+.subtitle1 {
+    text-transform: uppercase;
+    font-size: 10pt;
+    text-align: center;
+}
+
+.subtitle2 {
+    font-style: italic;
+    font-size: 10pt;
+    text-align: left;
+}
+
+.subtitle3 {
+    font-style: italic;
+    font-size: 10pt;
+    text-align: left;
+}
+
+.authors {
+    font-size: 11pt;
+}
+
+.email {
+    font-size: 9pt;
+}
+
+.content {
+    font-size: 16px;
+    text-align: justify;
+}
+
+.references {
+    font-size: 8pt;
+}
+
+.figure-title {
+    font-size: 8pt;
+}
+
+.table-info {
+    font-size: 8pt;
+}
+
+.column-wrapper {
+    columns: 2;
+    column-gap: 0.42cm;
+}
