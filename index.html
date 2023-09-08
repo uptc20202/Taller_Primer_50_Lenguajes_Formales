@@ -6,20 +6,159 @@
     <link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 <body>
-    <div class="title">Taller Primer 50% Lenguajes y gramáticas</div>
-    <br>
+    <div class="title"><p>Taller Primer 50% Lenguajes y gramáticas</p></div>
     
     <div class="column-wrapper">
-        <div class="content">1. Fundamentación en lenguajes formales y ejercicios de aplicación con transiciones vacías. (1.0)</div>
+        <div class="content"><p>1. Fundamentación en lenguajes formales y ejercicios de aplicación con transiciones vacías. (1.0)</p></div>
         <br>
-        <div class="content">1.1 I am reading in English</div>
+        <div class="content"><p>1.1 I am reading in English</p></div>
         <br>
         <div class="content">
             <!-- Your content goes here -->
-            The author Francisco Vico introduces us to the book "THEORY OF AUTOMATICS AND FORMAL LANGUAGES" with the aim of providing a comprehensive resource for the subject of Automata Theory and Formal Languages. The author acknowledges the abundance of existing books on the topic, each with its own terminology, nomenclature, and demonstrations. However, Vico's objective is to create a book that integrates ideas and exercises from other authors while unifying the different concepts.
+            <p>The author Francisco Vico introduces us to the book "THEORY OF AUTOMATICS AND FORMAL LANGUAGES" with the aim of providing a comprehensive resource for the subject of Automata Theory and Formal Languages. The author acknowledges the abundance of existing books on the topic, each with its own terminology, nomenclature, and demonstrations. However, Vico's objective is to create a book that integrates ideas and exercises from other authors while unifying the different concepts.
+            Before discussing the different concepts, it is important to know the notations used in this book</p>
+        </div>
+        <br>
+        <div class="content">
+            <div class="overlay">
+                <span class="close-button" onclick="hideZoomedImg()">&times;</span>
+                <img class="zoomed-image" src="img/Captura de pantalla 2023-09-07 182329.png" width="80%" alt="">
+            </div>
+        </div>  
+        <div class="content">
+            <br>
+            <p><b>Regular Languages</b></p>
+            <p>The author gives a series of definitions about regular language and grammars, he mentions that:</p>
+            <ul>
+                <li>The alphabet is a non-empty finite set of symbols.</li>
+                <li>Symbols are indivisible</li>
+                <li>A string over the alphabet Σ is a finite string of Σ symbols</li>
+                <li>When a special string has no symbols it is an empty string, and is represented by the symbol ε or λ. Even though the string is empty, it exists.</li>
+                <li>The number of symbols in a string x is called its length, denoted by |x|. And ε being empty has a length of 0.</li>
+                <li>Two strings X and Y can be concatenated (joined).</li>
+                <li>The concatenation is associative, i.e. x(yz) = (xy)z As a consequence, repeated concatenations can be written without parentheses.</li>
+            </ul>
+        </div>
 
-Before discussing the different concepts, it is important to know the notations used in this book
+        <div class="content">
+            <p>The regular languages are a type of formal language that can be described
+             by regular expressions or regular grammars. Almost all characterization 
+             problems for regular languages are algorithmically decidable, which 
+             means that there is an algorithm that can solve the problem in a finite 
+             time. The following are the five most common characterization problems 
+             for regular languages:</p>
 
+             <ol>
+                <li>Emptiness problem: Given a regular language L, is the empty language (i.e., the set that contains no strings) a subset of L?</li>
+                <li>Inclusion problem: Given two regular languages L1 and L2, is L1 a subset of L2?</li>
+                <li>Equivalence problem: Given two regular languages L1 and L2, are L1 and L2 equivalent (i.e., they contain exactly the same strings)?</li>
+                <li>Finiteness problem: Given a regular language L, is L finite?</li>
+                <li>Membership problem: Given a regular language L and a string w, does w belong to L?</li>
+              </ol>
+
+              <br>
+
+            <p>A grammar in regular languages is defined as a quadruple (Σ, V, S, P), where each element has a specific meaning:</p>  
+
+            <ul>
+                <li>Σ (Sigma): It is the finite set of terminal symbols or alphabet. These symbols are the basic elements that form the strings of the language.</li>
+                <li>V (Vee): It is the finite set of non-terminal symbols or variables. These symbols represent elements that can be replaced by strings of terminal or non-terminal symbols. </li>
+                <li>S (Start symbol): It is the initial non-terminal symbol or start symbol. It represents the symbol from which the derivation of the language strings begins.</li>
+                <li>P (Productions): It is the set of production rules or productions. Each production is a rule that defines how non-terminal symbols can be replaced by strings of terminal or non-terminal symbols.</li>
+            </ul>
+
+            <p>Closure of the types of languages refers to the set of operations that can be applied to a language, resulting in a new language that is also of the same type</p>
+
+            <ul>
+                <li>Type-0 languages (recursively enumerable languages): Closed under union, intersection, concatenation, and Kleene closure, but not under complementation.</li>
+                <li>Context-free languages: Closed under union, concatenation, and Kleene closure, but not under intersection or complementation.</li>
+                <li>Context-sensitive languages: Closed under all five operations (union, intersection, concatenation, Kleene closure, and complementation).</li>
+                <li>Regular languages: Closed under all five operations.</li>
+            </ul>
+
+            <b>Regular expressions</b>
+            <p>Regular expressions are a way to describe patterns in strings over an alphabet Σ. The regular expressions and the languages they represent are defined inductively as follows:</p>
+
+            <ul>
+                <li>The symbol ∅ is a regular expression that represents the empty language.</li>
+                <li>The symbol ε is a regular expression that represents the language whose only member is the empty string, {ε}.</li>
+                <li>For each c ∈ Σ, c is a regular expression that represents the language {c}, whose only member is the string consisting of the single character c.</li>
+                <li>If r and s are regular expressions representing the languages R and S, then (r + s), (rs), and (r∗) are regular expressions that represent the languages R ∪ S, RS, and R∗, respectively.</li>
+            </ul>
+            
+            <p><b>Finite State automata</b></p>
+            <p>Automata are used to recognize words of a language. A finite 
+                automaton has a finite memory and is defined by its states, input
+                symbols, initial state, transition rules, and acceptance criteria.
+                A finite deterministic automaton is formally defined by a quintuple 
+                M = (Q, Σ, q0, δ, A), where Q is a finite set of states, Σ is the 
+                input symbol set, q0 is the initial state, δ is the transition 
+                function, and A is the set of terminal states. The language recognized
+                 by M is denoted by L(M). Finite automata can be represented graphically
+                  as state diagrams. A nondeterministic finite automaton is defined by a
+                   quintuple M = (Q, Σ, S, δ, A), where S is the set of initial 
+                   states and δ maps a state and input symbol to a subset of states. 
+                   M accepts a word w if there is at least one terminal state in the 
+                   set of states reached by the transitions from the initial states. 
+                   The set of words accepted by M is the language L(M).
+            </p>
+
+            <p>1.2 Indagando el autómata vacío</p>
+            
+            <ul>
+                <li>Proporcione NFA-ε para el conjunto de todas las cadenas que constan de la cadena "01", la cual se repite una o más veces o para la cadena "010", la cual se repite una o más veces.</li>
+                <li>Proporcione NFA-ε para el conjunto de todas las cadenas binarias que contienen un número impar de ceros (0) o un número de unos (1) que no es un múltiplo de tres.</li>
+            </ul>
+            
+            <p>2. De la gramática y los autómatas.(1.5)</p>
+            <p>2.1 Gramática de muchos tipos (0.5): Sean las siguientes gramáticas:</p>
+            <br>
+            <img src="img/ArbolDeDerivacionGeneral.png" width="95%" alt="">
+            <img src="img/ArbolDeDerivacionParticular.png" width="75%" alt="">
+            <img src="img/ArbolDeDerivacionGeneral2.png" width="95%" alt="">
+            <img src="img/ArbolDeDerivacionParticular2.png" alt="" width="75%">
+            <img src="img/ArbolDeDerivacionGeneral3.png" alt="" width="85%">
+            <img src="img/ArbolDeDerivacionParticular3.png" width="85%" alt="">
+            <img src="img/ArbolDeDerivacionGeneral3.png" width="85%" alt="">
+            <img src="img/ArbolDeDerivacionParticular4.png" width="85%" alt="">
+
+             <!--Imagen larga-->
+
+             <img src="img/ArbolDeDerivacionParticular5.png" width="55%" alt="">
+
+             <p>Los árboles de las diferentes gramáticas pueden encontrarse en el siguiente link: <a href="https://app.diagrams.net/#G15-sfK7vJ3vzOsPj9ApWCTz6uBiRskUqu">Diagramas de gramáticas</a>  </p>
+
+             <p>2.2 Indagando sobre los autómatas.(0.5)</p>
+             <p>Sean los siguientes autómatas: </p>
+
+             <img src="img/A1.png" alt="">
+             <img src="img/A2.png" alt="">
+
+             <p>Entregables:</p>
+
+             <ul>
+                <li>Gramática equivalente al autómata.</li>
+                <li>Formalismo para cada uno de los autómatas, incluyendo sus funciones de transición.</li>
+                <li>Comprobaciones de palabras existentes (una) y no existentes (una) mediante funciones de transición y diagramas de hilos.</li>
+            </ul>
+             
+            <p>2.3 Funciones de salida (0.5)</p>
+
+            <p>Determinar las funciones de transición y la FTE de las siguientes 
+                palabras, teniendo en cuenta los autómatas propuestos:
+            </p>
+
+            <img src="img/A3.png" alt="">
+            <img src="img/A4.png" width="100%" alt="">
+
+            <p> <b>Entregables:</b> • Función de Transición de salida – FTE para cada 
+                autómata • Transición con el mayor número de estados • Cantidad 
+                de estados finales y de transición por cada una de las transiciones. 
+            </p>
+
+            <p>3. Minimizaciones y sistematización de gramáticas.(2.0)</p>
+
+            <p>3.1 Minimizando —> NFA — DFA (0.5)</p>
         </div>
 
         
@@ -30,7 +169,7 @@ Before discussing the different concepts, it is important to know the notations 
         <!-- Content about regular languages goes here -->
     </div>
     
-    <div class="subtitle2">A grammar in regular languages</div>
+    <div class="subtitle2"><p>A grammar in regular languages</p></div>
     <div class="content">
         <!-- Content about regular language grammar goes here -->
     </div>
