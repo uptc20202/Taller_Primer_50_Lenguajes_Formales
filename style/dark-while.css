@@ -1,0 +1,43 @@
+/* Estilos para el botón de cambio de tema */
+.theme-button {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #333; /* Color de fondo oscuro */
+            color: #fff; /* Color del texto en blanco */
+            padding: 10px 20px; /* Espaciado interno del botón */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Bordes redondeados */
+            cursor: pointer; /* Cambio de cursor al pasar el mouse */
+            font-size: 16px; /* Tamaño de fuente */
+            transition: background-color 0.3s ease; /* Transición de color de fondo */
+        
+}
+
+button:hover {
+    background-color: #fff;
+    color: #333;
+}
+/* button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}*/
+
+/* Estilos para el tema claro */
+body.light {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Estilos para el tema oscuro */
+body.dark {
+    background-color: #333;
+    color: #fff;
+}
