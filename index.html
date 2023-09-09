@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <title>Normas IEEE</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" href="style/dark-while.css">
 </head>
 <body>
+
+    <div class="theme-button">
+        <button id="theme-toggle">Cambiar Tema</button>
+    </div>
+
     <div class="title"><p>Taller Primer 50% Lenguajes y gramáticas</p></div>
     
     <div class="column-wrapper">
@@ -19,12 +25,11 @@
             Before discussing the different concepts, it is important to know the notations used in this book</p>
         </div>
         <br>
-        <div class="content">
-            <div class="overlay">
-                <span class="close-button" onclick="hideZoomedImg()">&times;</span>
-                <img class="zoomed-image" src="img/Captura de pantalla 2023-09-07 182329.png" width="80%" alt="">
-            </div>
-        </div>  
+     
+        <a href="img/Captura de pantalla 2023-09-07 182329.png" target="_blank">
+            <img src="img/Captura de pantalla 2023-09-07 182329.png" width="80%" alt="">
+        </a>
+        
         <div class="content">
             <br>
             <p><b>Regular Languages</b></p>
@@ -113,26 +118,47 @@
             <p>2. De la gramática y los autómatas.(1.5)</p>
             <p>2.1 Gramática de muchos tipos (0.5): Sean las siguientes gramáticas:</p>
             <br>
-            <img src="img/ArbolDeDerivacionGeneral.png" width="95%" alt="">
-            <img src="img/ArbolDeDerivacionParticular.png" width="75%" alt="">
-            <img src="img/ArbolDeDerivacionGeneral2.png" width="95%" alt="">
-            <img src="img/ArbolDeDerivacionParticular2.png" alt="" width="75%">
-            <img src="img/ArbolDeDerivacionGeneral3.png" alt="" width="85%">
-            <img src="img/ArbolDeDerivacionParticular3.png" width="85%" alt="">
-            <img src="img/ArbolDeDerivacionGeneral3.png" width="85%" alt="">
-            <img src="img/ArbolDeDerivacionParticular4.png" width="85%" alt="">
+            <a href="img/ArbolDeDerivacionGeneral.png" target="_blank">
+                <img src="img/ArbolDeDerivacionGeneral.png" width="95%" alt="">
+            </a>
+            <a href="img/ArbolDeDerivacionParticular.png" target="_blank">
+                <img src="img/ArbolDeDerivacionParticular.png" width="75%" alt="">
+            </a>
+            <a href="img/ArbolDeDerivacionGeneral2.png" target="_blank">
+                <img src="img/ArbolDeDerivacionGeneral2.png" width="95%" alt="">
+            </a>
+            <a href="img/ArbolDeDerivacionParticular2.png" target="_blank">
+                <img src="img/ArbolDeDerivacionParticular2.png" alt="" width="75%">
+            </a>
+            <a href="img/ArbolDeDerivacionGeneral3.png" target="_blank">
+                <img src="img/ArbolDeDerivacionGeneral3.png" alt="" width="85%">
+            </a>
+            <a href="img/ArbolDeDerivacionParticular3.png" target="_blank">
+                <img src="img/ArbolDeDerivacionParticular3.png" width="85%" alt="">
+            </a>
+            <a href="img/ArbolDeDerivacionGeneral3.png" target="_blank">
+                <img src="img/ArbolDeDerivacionGeneral3.png" width="85%" alt="">
+            </a>
+            <a href="img/ArbolDeDerivacionParticular4.png" target="_blank">
+                <img src="img/ArbolDeDerivacionParticular4.png" width="70%" alt="">
+            </a>
 
              <!--Imagen larga-->
+            <a href="img/ArbolDeDerivacionParticular5.png" target="_blank">
+                <img src="img/ArbolDeDerivacionParticular5.png" width="60%" alt="">
+            </a>
 
-             <img src="img/ArbolDeDerivacionParticular5.png" width="55%" alt="">
-
-             <p>Los árboles de las diferentes gramáticas pueden encontrarse en el siguiente link: <a href="https://app.diagrams.net/#G15-sfK7vJ3vzOsPj9ApWCTz6uBiRskUqu">Diagramas de gramáticas</a>  </p>
+             <p>Los árboles de las diferentes gramáticas pueden encontrarse en el siguiente link: <a href="https://app.diagrams.net/#G15-sfK7vJ3vzOsPj9ApWCTz6uBiRskUqu" target="_blank">Diagramas de gramáticas</a>  </p>
 
              <p>2.2 Indagando sobre los autómatas.(0.5)</p>
              <p>Sean los siguientes autómatas: </p>
 
-             <img src="img/A1.png" alt="">
-             <img src="img/A2.png" alt="">
+             <a href="img/A1.png" target="_blank">
+                <img src="img/A1.png" alt="">
+             </a>
+             <a href="img/A2.png" target="_blank">
+                <img src="img/A2.png" alt="">
+             </a>
 
              <p>Entregables:</p>
 
@@ -148,8 +174,13 @@
                 palabras, teniendo en cuenta los autómatas propuestos:
             </p>
 
-            <img src="img/A3.png" alt="">
-            <img src="img/A4.png" width="100%" alt="">
+            <a href="img/A3.png" target="_blank">
+                <img src="img/A3.png" alt="">
+            </a>
+
+            <a href="img/A4.png" target="_blank">
+                <img src="img/A4.png" width="100%" alt="">
+            </a>
 
             <p> <b>Entregables:</b> • Función de Transición de salida – FTE para cada 
                 autómata • Transición con el mayor número de estados • Cantidad 
@@ -159,6 +190,60 @@
             <p>3. Minimizaciones y sistematización de gramáticas.(2.0)</p>
 
             <p>3.1 Minimizando —> NFA — DFA (0.5)</p>
+
+            <p>Para realizar la minimización de las siguientes gramáticas se 
+                sigue el algoritmo dado en clase:</p>
+
+            <ul>
+                    <li>Iniciar un conjunto Q' = Ø.</li>
+                    <li>Adicionar a Q' al estado q0.</li>
+                    <li>Por cada estado en Q', encontrar su función de transición. Si se crean nuevos estados, agregarlos a Q' hasta que no queden estados para agregar.</li>
+                    <li>Asignar estados finales. Los estados finales del DFA resultante deberían ser todos los estados contenidos en "F" (estados aceptables) en el NFA original.</li>
+                    <li>Renombrar estados.</li>
+            </ul>
+            
+            <a href="img/A5.png" target="_blank">
+                <img src="img/A5.png" alt="" width="80%">
+            </a>
+
+            <p style="text-align: center"><b>AUTÓMATA REDUCIDO</b></p>
+            <a href="img/A6.png" target="_blank">
+                <img src="img/A6.png" alt="" width="80%">
+            </a>
+
+            <a href="img/A6.1.png" target="_blank">
+                <img src="img/A6.1.png" alt="" width="80%">
+            </a>
+
+            <p style="text-align: center"><b>AUTÓMATA REDUCIDO</b></p>
+
+            <a href="img/A7.1.png" target="_blank">
+                <img src="img/A7.1.png" alt="" width="80%">
+            </a>
+
+            <a href="img/A7.png" target="_blank">
+                <img src="img/A7.png" alt="" width="80%">
+            </a>
+
+            <a href="img/A8.png">
+                <img src="img/A8.png" alt="" width="80%">
+            </a>
+
+            <p>3.2 Minimizando —> DFA –- DFAmin (0.5)</p>
+
+            <a href="img/A9.png" target="_blank">
+                <img src="img/A9.png" alt="" width="80%">
+            </a>
+
+            <a href="img/A10.png" target="_blank">
+                <img src="img/A10.png" alt="" width="80%">
+            </a>
+
+            <a href="img/A11.png" target="_blank">
+                <img src="img/A11.png" alt="" width="80%">
+            </a>
+
+            <p>3.1 Programando árbol (1.0)</p>
         </div>
 
         
@@ -175,6 +260,7 @@
     </div>
     
     <!-- Continue with the rest of your content -->
-    
+
+    <script src="js/dark-while.js"></script>
 </body>
 </html>
